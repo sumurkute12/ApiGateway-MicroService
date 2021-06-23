@@ -20,7 +20,11 @@
 		<jacoco.version>0.7.5.201505241946</jacoco.version>
 		
 		<spring-cloud.version>Hoxton.BUILD-SNAPSHOT</spring-cloud.version>
+		 <sonar.projectKey>sumurkute12_ApiGateway-MicroService</sonar.projectKey>
+	  <sonar.organization>sumurkute12</sonar.organization>
+	  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
+	
 	<dependencies>
 	
 <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
@@ -183,6 +187,21 @@
 				<artifactId>junit</artifactId>
 				<version>4.8.1</version>
 			</plugin>
+			
+			<plugin>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.3.0.603</version>
+				<executions>
+				<execution>
+				<phase>verify</phase>
+				<goals>
+				<goal>sonar</goal>
+				</goals>
+				</execution>
+				</executions>
+			</plugin>
+			
 		</plugins>
 		
 		<!-- jacoco end -->
